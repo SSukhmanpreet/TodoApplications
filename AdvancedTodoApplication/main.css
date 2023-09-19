@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p, span {
+    color: white;
+
+}
+
+/* Apply general styles for the tableDiv */
+.tableDiv {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 20px auto; /* Center the tableDiv */
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the table */
+  .tableDiv table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tableDiv thead{
+    display:table-header-group
+  }
+  /* Style the table header row */
+  .tableDiv th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style the table body rows */
+  .tableDiv td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style the buttons */
+  .tableDiv button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Apply some hover effect to buttons */
+  .tableDiv button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add some spacing between the buttons */
+  .tableDiv .task-edit-button {
+    margin-right: 5px;
+  }
+  
+  /* Style the activityLog list */
+  #activityLog {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Style the draggable row (if you enable it) */
+  /* Uncomment the CSS below if you want to use the draggable feature
+     provided in the commented HTML code. */
+  
+  /* .tableDiv tr[draggable='true'] {
+    cursor: move;
+  }
+  */
+  
+  /* Optional: Add styles for icons (if you use any) */
+  
+  .tableDiv .bi {
+    margin-right: 5px;
+  }
+ 
+  
+  /* Optional: Add specific styles for different categories or priorities (if needed) */
+  
+  /* .tableDiv td[data-category='Work'] {
+    color: #ff0000; 
+  }
+  
+  .tableDiv td[data-priority='High'] {
+    font-weight: bold; 
+  } */
+ 
+  
+
+
+
+
+/* .tableDiv{
+    background-color: yellow;
+    width: 100%;
+}
+.todo-block {
+    color: white;
+    width: 100%;
+}
+thead{
+    position: relative;
+    background-color: red;
+
+}
+tbody{
+    background-color: blue;
+    width: 100%;
+}
+#list-all-tasks ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+.todo-block .tags, .sub-tasks {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+ .todo-block .checkbox {
+    width: 10%;
+} 
+
+
+td {
+    width: 10%;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: rgb(18, 0, 73);
+    background-color: rgb(223, 248, 255)
+}
+
+header {
+    padding: 16px 16px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 5px auto;
+    background-color: rgb(0, 0, 131);
+    border-radius: 32px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: rgb(121, 226, 255);
+    text-align: center;
+    /* background-color: brown; */
+    /* justify-content: center; */
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.mainInputs {
+    display: flex;
+    flex: 1;
+}
+
+.tagSubtaskInputs {
+    display: flex;
+    flex: 1;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+#input-task-field, input {
+    flex: 1 1 0%;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 16px;
+    font-size: 16px;
+    background-color: azure;
+    border-style: solid;
+    border-color: darkblue;
+    border-width: 1.5px;
+    border-radius: 20px;
+    margin: 5px 0px;
+    margin-right: 16px;
+}
+
+#submit-bttn, #delete-all-bttn {
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: rgb(187, 223, 255);
+    border-radius: 10px;
+    width: 95%;
+    margin-right: 10px;
+}
+
+.submitButton {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    border-radius: 32px;
+}
+
+.headings {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.headings * {
+    flex: 1;
+}
+
+.task-list {
+    padding: 20px;
+}
+
+.task-list h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 13px;
+}
+
+#list-all-tasks .indvl-task {
+    /* display: flex; */
+    background-color: rgb(0, 130, 102);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+.indvl-task * {
+    flex: 1;
+}
+
+/* #list-all-tasks .indvl-task .task-content {
+    flex: 1 1 0%;
+}
+
+#list-all-tasks .indvl-task .task-content .task-text {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 15px;
+    width: 70%;
+    display: block;
+    color: rgb(121, 226, 255);
+    background-color: blue;
+    margin-left: 10px;
+    cursor: default;
+    word-wrap: break-word;
+} */
+#tagsListItem {
+    color: white;
+    display: inline;
+}
+
+#subtaskListItem {
+    display: inline;
+    color: white;
+}
+
+#category-selector {
+    width: 10%;
+}
+
+#list-all-tasks .indvl-task .task-text {
+    /* border: none; */
+    /* outline: none; */
+    /* background: none; */
+    font-size: 15px;
+    /* width: 80%; */
+    /* display: block; */
+    color: rgb(121, 226, 255);
+    /* margin-left: 10px; */
+    padding-left: 10px;
+    cursor: default;
+    word-wrap: break-word;
+}
+
+#list-all-tasks .indvl-task .checked {
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+#list-all-tasks .indvl-task {
+    display: flex;
+}
+
+#list-all-tasks .indvl-task button, select {
+    border: none;
+    background-color: rgb(187, 223, 255);
+    margin: 0 8px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin-right: 8px;
+    padding: 2px 8px 2px 8px;
+}
+
+.task-edit-button, .task-delete-button {
+    max-width: 70px;
+    max-height: 20px;
+}
+
+.tagSubtaskInputs {
+    display: flex;
+    position: relative;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    padding: 5px;
+    /* box-shadow: 2px 2px 5px #00000033; */
+    width: 100%;
+}
+
+.tagSubtaskInputs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tagSubtaskInputs li {
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    /* width: 100%; */
+}
+
+#date-time {
+    color: white;
+}
+
+
+.tagSubtaskInputs input[type="text"]:focus {
+    outline: none;
+}
+
+.tagSubtaskInputs .delete-button {
+    background-color: transparent;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    margin-left: 5px;
+}
